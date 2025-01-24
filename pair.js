@@ -65,7 +65,7 @@ router.get('/', async (req, res) => {
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ❶ || 𝐶𝑟𝑒𝑎𝑡𝑜𝑟 = Njabulo
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❷ || Support Group= https://chat.whatsapp.com/Elw76HZI6R13C9OfYQNuoJ
+❷ || Support Group= https://chat.whatsapp.com/KEG7tuWlCMs6OPEcLuNnac
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 Please Follow My Support Channel: https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T
 Wanna talk? http://wa.me/26777821911?
