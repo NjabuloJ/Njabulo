@@ -57,22 +57,18 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
                let GIFTED_MD_TEXT = `
-┏━━━━━━━━━━━━━━
-┃𝑆𝑒𝑠𝑠𝑖𝑜𝑛
-┃𝑆𝑢𝑐𝑐𝑒𝑠𝑓𝑢𝑙𝑙𝑦
-┃𝐶𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑
-┗━━━━━━━━━━━━━━━
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || 𝐶𝑟𝑒𝑎𝑡𝑜𝑟 = Njabulo
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❷ || Support Group= https://chat.whatsapp.com/KEG7tuWlCMs6OPEcLuNnac
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-Please Follow My Support Channel: https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T
-Wanna talk? http://wa.me/26777821911?
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-©*Please Follow Me*
+ɴᴊᴀʙᴜʟᴏ ᴊʙ ɪs ᴄᴏɴɴᴇᴄᴛᴇᴅ
+╭══════════════⊷
+┇❍▸ ʙᴏᴛ ɴᴀᴍᴇ: ɴᴊᴀʙᴜʟᴏ ᴊʙ
+┇❍▸ 𝑆𝑒𝑠𝑠𝑖𝑜𝑛
+┇❍▸ 𝑆𝑢𝑐𝑐𝑒𝑠𝑓𝑢𝑙𝑙𝑦
+┇❍▸ 𝐶𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑
+┇❍▸ https://wa.me/26777821911
+┇❍▸ channel https://shorturl.at/q8ZuS
+╰══════════════⊷
 
 _Don't Forget To Give Star To My Repo_`
+    let audioUrl = "https://files.catbox.moe/e52xx6.mp3";
  await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
  
 
