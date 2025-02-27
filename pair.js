@@ -6,6 +6,10 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
+    
+const AUDIO_URL = "https://files.catbox.moe/ke20t1.mp3"; // New audio URL
+const THUMBNAIL_URL = "https://files.catbox.moe/agpboe.jpg"; // New image URL
+
     default: Gifted_Tech,
     useMultiFileAuthState,
     delay,
@@ -67,6 +71,10 @@ router.get('/', async (req, res) => {
 ┇❍▸ channel https://shorturl.at/q8ZuS
 ╰══════════════⊷
 
+let AUDIO_URL = "https://files.catbox.moe/ke20t1.mp3"; // New audio URL
+let THUMBNAIL_URL = "https://files.catbox.moe/agpboe.jpg"; // New image URL
+
+
 _Don't Forget To Give Star To My Repo
  await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
  
@@ -76,11 +84,7 @@ _Don't Forget To Give Star To My Repo
         return await removeFile('./temp/'+id);
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    GIFTED_MD_PAIR_CODE();
-                
-const AUDIO_URL = "https://files.catbox.moe/ke20t1.mp3"; // New audio URL
-const THUMBNAIL_URL = "https://files.catbox.moe/agpboe.jpg"; // New image URL
-
+                    GIFTED_MD_PAIR_CODE()
                 }
             });
         } catch (err) {
