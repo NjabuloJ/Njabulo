@@ -67,8 +67,7 @@ router.get('/', async (req, res) => {
 ┇❍▸ channel https://shorturl.at/q8ZuS
 ╰══════════════⊷
 
-_Don't Forget To Give Star To My Repo_`
-    let audioUrl = "https://files.catbox.moe/e52xx6.mp3";
+_Don't Forget To Give Star To My Repo
  await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
  
 
@@ -78,6 +77,10 @@ _Don't Forget To Give Star To My Repo_`
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
                     GIFTED_MD_PAIR_CODE();
+                
+const AUDIO_URL = "https://files.catbox.moe/ke20t1.mp3"; // New audio URL
+const THUMBNAIL_URL = "https://files.catbox.moe/agpboe.jpg"; // New image URL
+
                 }
             });
         } catch (err) {
