@@ -6,10 +6,6 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    
-const AUDIO_URL = "https://files.catbox.moe/ke20t1.mp3"; // New audio URL
-const THUMBNAIL_URL = "https://files.catbox.moe/agpboe.jpg"; // New image URL
-
     default: Gifted_Tech,
     useMultiFileAuthState,
     delay,
@@ -61,22 +57,24 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
                let GIFTED_MD_TEXT = `
-ɴᴊᴀʙᴜʟᴏ ᴊʙ ɪs ᴄᴏɴɴᴇᴄᴛᴇᴅ
-╭══════════════⊷
-┇❍▸ ʙᴏᴛ ɴᴀᴍᴇ: ɴᴊᴀʙᴜʟᴏ ᴊʙ
-┇❍▸ 𝑆𝑒𝑠𝑠𝑖𝑜𝑛
-┇❍▸ 𝑆𝑢𝑐𝑐𝑒𝑠𝑓𝑢𝑙𝑙𝑦
-┇❍▸ 𝐶𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑
-┇❍▸ https://wa.me/26777821911
-┇❍▸ channel https://shorturl.at/q8ZuS
-╰══════════════⊷
+PAIN CODE CONNECTED BY NJABULO JB 
 
-let AUDIO_URL = "https://files.catbox.moe/ke20t1.mp3"; // New audio URL
-let THUMBNAIL_URL = "https://files.catbox.moe/agpboe.jpg"; // New image URL
+*💻MADE WITH BY NJABULO JB💻*
 
+🪰 [WELCOME TO THE SAD REALM]🪰
+*you `ve computed the first step to deploy happiness-xmd*
 
-_Don't Forget To Give Star To My Repo
- await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
+*📁 BOT REPO:*
+
+*📁 WANNA ME:* +26777821911
+
+🪀 WHATSAPP CHANNEL: 
+https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T
+
+2025 BY NJABULO JB
+
+💡 *Don't forget to give a star to my repo*💡
+    await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
  
 
         await delay(100);
