@@ -806,16 +806,16 @@ zk.ev.on('group-participants.update', async (group) => {
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Alec-Jb is connecting...");
+                console.log("ℹ️ Njabulo is connecting...");
             }
             else if (connection === 'open') {
-                console.log("✅ Alec-Jb Connected to WhatsApp! ☺️");
+                console.log("✅ Njabulo Connected to WhatsApp! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("Alec-Jb is Online 🕸\n\n");
+                console.log("Njabulo is Online 🕸\n\n");
                 //chargement des commandes 
                 console.log("Loading Anyway Commands ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
@@ -849,7 +849,7 @@ zk.ev.on('group-participants.update', async (group) => {
                 if((conf.DP).toLowerCase() === 'yes') {     
 
                 let cmsg =`      
-                🤖Alec-Jb is connected to device🤖`;
+                🤖 Njabulo is connected to device🤖`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
             }
