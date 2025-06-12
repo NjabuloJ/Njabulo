@@ -1,6 +1,6 @@
 {
   "name": "Njabulo-Jb",
-  "description": "Alec-Jb is a multidevice WhatsApp bot built to make your WhatsApp enjoyable.",
+  "description": "Njabulo Jb is a multidevice WhatsApp bot built to make your WhatsApp enjoyable.",
   "keywords": [
     "bot",
     "node",
@@ -8,7 +8,7 @@
     "whatsapp"
   ],
   "logo": "https://telegra.ph/file/b148f6ed21fa02ac5325b.jpg",
-  "repository": "https://github.com/NjabuloJ/Alec-Jb",
+  "repository": "https://github.com/NjabuloJ/Njabulo",
   "success_url": "/",
   "stack": "container",
   "env": {
@@ -40,11 +40,6 @@
     "AUTO_BIO": {
       "description": "This automatically update your bio status.Always make sure you insert your OWNER_NAME since it uses that to update your bio name status",
       "value": "yes",
-      "required": false
-    },
-    "AUTO_SAVE_CONTACTS": {
-      "description": "Enter yes for your bot to auto save contacts",
-      "value": "no",
       "required": false
     },
     "AUTO_DOWNLOAD_STATUS": {
@@ -80,7 +75,7 @@
     },
     "BOT_NAME": {
       "description": "You must give a name for your bot",
-      "value": "",
+      "value": "Njabulo Jb",
       "required": false
     },
     "TIMEZONE": {
@@ -100,13 +95,8 @@
     },
     "OWNER_NAME": {
       "description": "Insert your name here",
-      "value": "Alec-Jb",
+      "value": "Njabulo Jb",
       "required": false
-    },
-    "URL": {
-      "description": "You must add your bot image URL",
-      "value": "",
-      "required": true
     },
     "NUMERO_OWNER": {
       "description": "Your phone number (exclude '+' and area code, e.g., '2547222222233')",
