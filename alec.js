@@ -848,11 +848,20 @@ zk.ev.on('group-participants.update', async (group) => {
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
 
-                let cmsg =`      
-                🤖 Njabulo is connected to device🤖`;
-                await zk.sendMessage(zk.user.id, { text: cmsg });
-                }
-            }
+            let cmsg = ` 🤖Alec-Jb is disconnected from device🤖`;
+           await zk.sendMessage(zk.user.id, {
+            text: cmsg,
+            contextInfo: {
+              externalAdReply: {
+              title: "Njabulo Jb",
+              body: "Connection update !",
+             thumbnailUrl: conf.URL,
+             sourceUrl: conf.GURL,
+           mediaType: 1,
+           showAdAttribution: true
+             }
+          }
+        });
             else if (connection == "close") {
                 let raisonDeconnexion = new boom_1.Boom(lastDisconnect?.error)?.output.statusCode;
                 if (raisonDeconnexion === baileys_1.DisconnectReason.badSession) {
