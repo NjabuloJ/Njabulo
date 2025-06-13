@@ -64,13 +64,6 @@ fana({ nomCom: "img", aliases: ["image", "images"], categorie: "Images", reactio
       zk.sendMessage(dest, {
         image: { url: results[i].url },
         caption: `😔 Hold up Grabbing your  image like a pro! 🔍`,
-        contextInfo: {
-          externalAdReply: {
-            title: "Njabulo Jb",
-            body: "Message via ad!",
-            thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-            sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-            mediaType: 1,
             showAdAttribution: true
           }
         }
