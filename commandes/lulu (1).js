@@ -8,7 +8,7 @@ fana({ nomCom: "img", aliases: ["image", "images"], categorie: "Images", reactio
 
   if (!arg[0]) {
    zk.sendMessage(dest, {
-      text: 'Hallo🥲\n😡Yo stop slacking! Give me a query, like .img cat',
+      text: '😡Yo stop slacking! Give me a query, like .img cat',
       contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
@@ -28,7 +28,7 @@ fana({ nomCom: "img", aliases: ["image", "images"], categorie: "Images", reactio
   gis(searchTerm, async (error, results) => {
     if (error) {
       zk.sendMessage(dest, {
-        text: "Hallo🙆\n😡Total disaster Something broke Fix it or scram!",
+        text: "😡Total disaster Something broke Fix it or scram!",
         contextInfo: {
           externalAdReply: {
             title: "Njabulo Jb",
@@ -45,7 +45,7 @@ fana({ nomCom: "img", aliases: ["image", "images"], categorie: "Images", reactio
 
     if (!results || results.length === 0) {
       zk.sendMessage(dest, {
-        text: "Hallo🤷\n🤣No images found.",
+        text: "🤣No images found.",
         contextInfo: {
           externalAdReply: {
             title: "Njabulo Jb",
@@ -63,7 +63,7 @@ fana({ nomCom: "img", aliases: ["image", "images"], categorie: "Images", reactio
     for (let i = 0; i < Math.min(results.length, 5); i++) {
       zk.sendMessage(dest, {
         image: { url: results[i].url },
-        caption: `Hallo🧏\n😔 Hold up Grabbing your  image like a pro! 🔍`,
+        caption: `😔 Hold up Grabbing your  image like a pro! 🔍`,
         contextInfo: {
           externalAdReply: {
             title: "Njabulo Jb",
