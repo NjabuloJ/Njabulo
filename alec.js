@@ -668,7 +668,7 @@ zk.ev.on('group-participants.update', async (group) => {
         ppgroup = '';
     }
 
-    try {
+ try {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
@@ -680,89 +680,55 @@ zk.ev.on('group-participants.update', async (group) => {
 
             msg += `read the group description to avoid getting removeved🧏 `;
 
-      if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-      let msg = `hallo welcome to group this group is future🙋`;
-      let membres = group.participants;
-  for (let membre of membres) {
-    msg += ` \n Hey 🖐️ @${membre.split("@")[0]} welcome to group nah🤗. \n\n`;
-  }
-  msg += `read the group description to avoid getting removeved🧏 `;
-  zk.sendMessage(group.id, {
-    image: { url: ppgroup },
-    caption: msg,
-    mentions: membres,
-    contextInfo: {
-      externalAdReply: {
-        title: "Njabulo Jb",
-        body: "Welcome message !",
-        thumbnailUrl: conf.URL,
-        sourceUrl: conf.GURL,
-        mediaType: 1,
-        showAdAttribution: true
-      }
+            zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
+        } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
+            let msg = `one or somes member(s) left group;🤷\n l will miss you goodbye🚮\n`;
+
+            let membres = group.participants;
+            for (let membre of membres) {
+                msg += `@${membre.split("@")[0]}\n`;
+            }
+
+            zk.sendMessage(group.id, { text: msg, mentions: membres });
+
+        } else if (group.action == 'promote' && (await recupevents(group.id, "antipromote") == 'on') ) {
+            //  console.log(zk.user.id)
+          if (group.author == metadata.owner || group.author  == conf.NUMERO_OWNER + '@s.whatsapp.net' || group.author == decodeJid(zk.user.id)  || group.author == group.participants[0]) { console.log('Cas de superUser je fais rien') ;return ;} ;
+
+
+         await   zk.groupParticipantsUpdate(group.id ,[group.author,group.participants[0]],"demote") ;
+
+         zk.sendMessage(
+              group.id,
+              {
+                text : `@${(group.author).split("@")[0]} has violated the anti-promotion rule, therefore both ${group.author.split("@")[0]} and @${(group.participants[0]).split("@")[0]} have been removed from administrative rights.`,
+                mentions : [group.author,group.participants[0]]
+              }
+         )
+
+        } else if (group.action == 'demote' && (await recupevents(group.id, "antidemote") == 'on') ) {
+
+            if (group.author == metadata.owner || group.author ==  conf.NUMERO_OWNER + '@s.whatsapp.net' || group.author == decodeJid(zk.user.id) || group.author == group.participants[0]) { console.log('Cas de superUser je fais rien') ;return ;} ;
+
+
+           await  zk.groupParticipantsUpdate(group.id ,[group.author],"demote") ;
+           await zk.groupParticipantsUpdate(group.id , [group.participants[0]] , "promote")
+
+           zk.sendMessage(
+                group.id,
+                {
+                  text : `@${(group.author).split("@")[0]} has violated the anti-demotion rule by removing @${(group.participants[0]).split("@")[0]}. Consequently, he has been stripped of administrative rights.` ,
+                  mentions : [group.author,group.participants[0]]
+                }
+           )
+
+     } 
+
+    } catch (e) {
+        console.error(e);
     }
-  });
-} else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
-  let msg = `one or somes member(s) left group;🤷\n l will miss you goodbye🚮\n`;
-  let membres = group.participants;
-  for (let membre of membres) {
-    msg += `@${membre.split("@")[0]}\n`;
-  }
-  zk.sendMessage(group.id, {
-    text: msg,
-    mentions: membres,
-    contextInfo: {
-      externalAdReply: {
-        title: "Njabulo Jb",
-        body: "Goodbye message !",
-        thumbnailUrl: conf.URL,
-        sourceUrl: conf.GURL,
-        mediaType: 1,
-        showAdAttribution: true
-      }
-    }
-  });
-} else if (group.action == 'promote' && (await recupevents(group.id, "antipromote") == 'on')) {
-  if (group.author == metadata.owner || group.author == conf.NUMERO_OWNER + '@s.whatsapp.net' || group.author == decodeJid(zk.user.id) || group.author == group.participants[0]) {
-    console.log('Cas de superUser je fais rien');
-    return;
-  }
-  await zk.groupParticipantsUpdate(group.id, [group.author, group.participants[0]], "demote");
-  zk.sendMessage(group.id, {
-    text: `@${(group.author).split("@")[0]} has violated the anti-promotion rule, therefore both ${group.author.split("@")[0]} and @${(group.participants[0]).split("@")[0]} have been removed from administrative rights.`,
-    mentions: [group.author, group.participants[0]],
-    contextInfo: {
-      externalAdReply: {
-        title: "Njabulo Jb",
-        body: "Anti-promotion message !",
-        thumbnailUrl: conf.URL,
-        sourceUrl: conf.GURL,
-        mediaType: 1,
-        showAdAttribution: true
-      }
-    }
-  });
-} else if (group.action == 'demote' && (await recupevents(group.id, "antidemote") == 'on')) {
-  if (group.author == metadata.owner || group.author == conf.NUMERO_OWNER + '@s.whatsapp.net' || group.author == decodeJid(zk.user.id) || group.author == group.participants[0]) {
-    console.log('Cas de superUser je fais rien');
-    return;
-  }
-  await zk.groupParticipantsUpdate(group.id, [group.author], "demote");
-  await zk.groupParticipantsUpdate(group.id, [group.participants[0]], "promote");
-  zk.sendMessage(group.id, {
-    text: `@${(group.author).split("@")[0]} has violated the anti-demotion rule by removing @${(group.participants[0]).split("@")[0]}. Consequently, he has been stripped of administrative rights.`,
-    mentions: [group.author, group.participants[0]],
-    contextInfo: {
-      externalAdReply: {
-        title: "Njabulo Jb",
-        body: "Anti-demotion message !",
-        thumbnailUrl: conf.URL,
-        sourceUrl: conf.GURL,
-        mediaType: 1,
-        showAdAttribution: true
-      }
-    }
-  });
+});
+
 
 /******** fin d'evenement groupe update *************************/
 
@@ -883,20 +849,11 @@ zk.ev.on('group-participants.update', async (group) => {
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
 
-            let cmsg = ` 🤖Alec-Jb is disconnected from device🤖`;
-           zk.sendMessage(zk.user.id, {
-            text: cmsg,
-            contextInfo: {
-              externalAdReply: {
-              title: "Njabulo Jb",
-              body: "Connection update !",
-             thumbnailUrl: conf.URL,
-             sourceUrl: conf.GURL,
-           mediaType: 1,
-           showAdAttribution: true
-             }
-          }
-        });
+                 let cmsg =`      
+                🤖 Njabulo Jb is connected to device🤖`;
+                await zk.sendMessage(zk.user.id, { text: cmsg });
+                }
+            }
             else if (connection == "close") {
                 let raisonDeconnexion = new boom_1.Boom(lastDisconnect?.error)?.output.statusCode;
                 if (raisonDeconnexion === baileys_1.DisconnectReason.badSession) {
