@@ -79,7 +79,16 @@ fana({ nomCom: "vv", aliases: ["send", "keep"], categorie: "Use" }, async (dest,
     }
 
   } else {
-    repondre('Mention the message that you want to save');
-  }
-});
-          
+  zk.sendMessage(dest, {
+      text: '😡Yo stop slacking! Give me Mention the message that you',
+      contextInfo: {
+        externalAdReply: {
+          title: "Njabulo Jb",
+          body: "Message via ad !",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          mediaType: 1,
+          showAdAttribution: true
+        }
+      }
+    });
