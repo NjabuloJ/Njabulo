@@ -34,7 +34,7 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
 // Créer une date et une heure en GMT
   const temps = moment().format('HH:mm:ss');
   const date = moment().format('DD/MM/YYYY');
-  const imgs = 'https://files.catbox.moe/73h91g.jpg';
+  const img = 'https://files.catbox.moe/73h91g.jpg';
 
   let infoMsg =  `
 *╭─•❖ 𓆩 🦋 𓆪 ❖•─╮*
