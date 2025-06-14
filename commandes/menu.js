@@ -133,19 +133,20 @@ else {
     }, { quoted: ms });  
      }
     
-       // List of audio URLs
-    const audioUrls = [
-        "https://files.catbox.moe/s12zlw.mp3" // New song added
-    ];
+       // message down on menu
+      let infoMsgs =  `
+*╭─•❖ 𓆩 🦋 𓆪 ❖•─╮*
+  𝐀𝐋𝐄𝐂-𝐉𝐁 𝐏𝐔𝐁𝐋𝐈𝐂 
+*╰─•❖ 𓆩 🦋 𓆪 ❖•─╯* 
+*╭─❖*
+*┋🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
+*╰─❖*
 
-    // Select a random audio file
-    const randomAudioUrl = audioUrls[Math.floor(Math.random() * audioUrls.length)];
+> sir Njabulo Jb`;
 
     try {
         await zk.sendMessage(dest, {
-       audio: { url: randomAudioUrl },
-       mimetype: 'audio/mpeg',
-       ptt: true, // Send as a voice note
+       text: infoMsgs,
         contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
@@ -158,8 +159,8 @@ else {
             }
         }, { quoted: ms });
     } catch (e) {
-        console.log("🥵🥵 Error sending audio: " + e);
-        repondre("🥵🥵 Error sending audio: " + e);
+        console.log("🥵🥵 Error sending menu: " + e);
+        repondre("🥵🥵 Error sending menu: " + e);
     }
 });
 
