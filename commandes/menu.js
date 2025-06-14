@@ -10,7 +10,7 @@ const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
 
 
-fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
+fana({ nomCom: "allmenu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../njabulo//fana");
     var coms = {};
@@ -37,9 +37,7 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
   const img = 'https://files.catbox.moe/73h91g.jpg';
 
   let infoMsg =  `
-❖Oll commands on Njabulo Jb 
-❖ᴘʟᴜɢɪɴs ᴄᴍᴅ:* ${cm.length}
-❖
+❖ *Oll commands on Njabulo Jb:* ${cm.length}*
 `;
     
     
@@ -48,13 +46,12 @@ let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
     for (const cat in coms) {
         menuMsg += `
 ❖ *${cat}*
-❖`;
+`;
         for (const cmd of coms[cat]) {
             menuMsg += `
 ❖ ${cmd}`;
         }
         menuMsg += `
-❖
 \n`
     }
 
@@ -128,7 +125,7 @@ else {
        // message down on menu
       let infoMsgs =  `
 *╭─•❖ 𓆩 🦋 𓆪 ❖•─╮*
-  𝐀𝐋𝐄𝐂-𝐉𝐁 𝐏𝐔𝐁𝐋𝐈𝐂 
+  *Loading oll commands*
 *╰─•❖ 𓆩 🦋 𓆪 ❖•─╯* 
 *╭─❖*
 *┋🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
