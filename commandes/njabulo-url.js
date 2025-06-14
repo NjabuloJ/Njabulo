@@ -41,7 +41,7 @@ fana({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async
     const { msgRepondu, repondre } = commandeOptions;
 
     if (!msgRepondu) {
-          zk.sendMessage(dest, {
+      zk.sendMessage(dest, {
       text: '😡Yo stop slacking! Give me a query, like .\nPlease reply to an image, video, or audio file.',
       contextInfo: {
         externalAdReply: {
@@ -63,7 +63,7 @@ fana({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async
         const videoSize = msgRepondu.videoMessage.fileLength;
 
         if (videoSize > 50 * 1024 * 1024) {
-         zk.sendMessage(dest, {
+      zk.sendMessage(dest, {
       text: '🤷The video is too long. Please send a smaller video',
       contextInfo: {
         externalAdReply: {
@@ -101,7 +101,7 @@ fana({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async
             return;
         }
     } else {
-         zk.sendMessage(dest, {
+      zk.sendMessage(dest, {
       text: '😡Yo pported .\nPlease reply to an image, video, or audio file.',
       contextInfo: {
         externalAdReply: {
