@@ -73,4 +73,3 @@ fana({
     repondre("Error during the search process: " + error.message);
   }
 });
-￼Enter
