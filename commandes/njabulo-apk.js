@@ -11,12 +11,9 @@ fana({
   aliases: ['app', 'playstore'],
   reaction: '📂',
   categorie: 'Download'
-}, async (groupId, client, commandeOptions) => {
-  const { repondre, arg, ms } = commandeOptions;
+const { ms, arg } = commandeOptions;
 
-  // Check if app name is provided
-  const appName = arg.join(" ");
-  if (!appName) {
+  if (!arg[0]) {
   zk.sendMessage(dest, {
     text: '😡Yo stop slacking! Give me a query, like .apk WhatsApp message',
      contextInfo: {
