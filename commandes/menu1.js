@@ -45,26 +45,6 @@ const date = moment().format('DD/MM/YYYY');
 *┋🏹ᴘʀᴇғɪx: [ ${prefixe} ]*
 *┋📟ᴘʟᴜɢɪɴs ᴄᴍᴅ:* ${cm.length}
 *╰─❖*
-
-> sir Njabulo Jb\n${readmore}`;
-    
-    
-let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
-
-    for (const cat in coms) {
-        menuMsg += `
-*${cat}*
-*╭─❖*`;
-        for (const cmd of coms[cat]) {
-            menuMsg += `
-*┋* ${cmd}`;
-        }
-        menuMsg += `
-*╰─❖*
-\n`
-    }
-
-    menuMsg += `> sir Njabulo JB 
 `;
 
    var lien = mybotpic();
@@ -72,7 +52,7 @@ let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
         zk.sendMessage(dest, {
-      text: infoMsg + menuMsg,
+      text: infoMsg,
       contextInfo: {
        footer: "*Njabulo Jb*, developed by Njabulo",
         gifPlayback: true,
@@ -97,7 +77,7 @@ let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
         zk.sendMessage(dest, {
-      text: infoMsg + menuMsg,
+      text: infoMsg,
       contextInfo: {
         footer: "*Njabulo_Jb*, developed by Njabulo",
         externalAdReply: {
@@ -119,7 +99,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
 } 
 else {
     zk.sendMessage(dest, {
-      text: infoMsg + menuMsg,
+      text: infoMsg,
      footer: "*Njabulo Jb*, developed by Njabulo",
      gifPlayback: true,
       contextInfo: {
