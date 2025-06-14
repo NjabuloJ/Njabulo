@@ -37,32 +37,24 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
   const img = 'https://files.catbox.moe/73h91g.jpg';
 
   let infoMsg =  `
-*╭─•❖ 𓆩 🦋 𓆪 ❖•─╮*
-  𝐀𝐋𝐄𝐂-𝐉𝐁 𝐏𝐔𝐁𝐋𝐈𝐂 
-*╰─•❖ 𓆩 🦋 𓆪 ❖•─╯* 
-*╭─❖*
-*┋🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
-*┋📅 ᴅᴀᴛᴇ:* ${date}
-*┋⏰ ᴛɪᴍᴇ:* ${temps}
-*┋🏹ᴘʀᴇғɪx: [ ${prefixe} ]*
-*┋📟ᴘʟᴜɢɪɴs ᴄᴍᴅ:* ${cm.length}
-*╰─❖*
-
-> sir Njabulo Jb\n${readmore}`;
+❖Oll commands on Njabulo Jb 
+❖ᴘʟᴜɢɪɴs ᴄᴍᴅ:* ${cm.length}
+❖
+`;
     
     
 let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
 
     for (const cat in coms) {
         menuMsg += `
-*${cat}*
-*╭─❖*`;
+❖ *${cat}*
+❖`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-*┋* ${cmd}`;
+❖ ${cmd}`;
         }
         menuMsg += `
-*╰─❖*
+❖
 \n`
     }
 
