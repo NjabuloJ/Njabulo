@@ -12,7 +12,7 @@ fana({ nomCom: "img", aliases: ["image", "images"], categorie: "Images", reactio
       contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
-          body: "Message via ad !",
+          body: "🤷img name !",
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
@@ -32,7 +32,7 @@ fana({ nomCom: "img", aliases: ["image", "images"], categorie: "Images", reactio
         contextInfo: {
           externalAdReply: {
             title: "Njabulo Jb",
-            body: "Message via ad!",
+            body: "📃Message fix or scram!",
             thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
             sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
             mediaType: 1,
@@ -49,7 +49,7 @@ fana({ nomCom: "img", aliases: ["image", "images"], categorie: "Images", reactio
         contextInfo: {
           externalAdReply: {
             title: "Njabulo Jb",
-            body: "Message via ad!",
+            body: "🥲Message image found!",
             thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
             sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
             mediaType: 1,
@@ -64,6 +64,13 @@ fana({ nomCom: "img", aliases: ["image", "images"], categorie: "Images", reactio
       zk.sendMessage(dest, {
         image: { url: results[i].url },
         caption: `😔 Hold up Grabbing your  image like a pro! 🔍`,
+          contextInfo: {
+          externalAdReply: {
+            title: "Njabulo Jb",
+            body: "🖼️Message downloaded!",
+            thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+            sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+            mediaType: 1,
             showAdAttribution: true
           }
         }
