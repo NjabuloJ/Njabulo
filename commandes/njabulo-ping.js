@@ -55,11 +55,11 @@ fana(
 
     // Reply with ping results
     await zk.sendMessage(dest, {
-      text: 'ping running',
+      text: `Ping Results: ${formattedResults}`, 
       contextInfo: {
         externalAdReply: {
-          title: "B.M.B XMD - Ultra-Fast Response",
-          body: `Ping Results: ${formattedResults}`,
+          title: "Njabulo Jb",
+          body: "Message Ultra-Fast Response",
          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
@@ -110,7 +110,7 @@ fana(
 
     // Reply with uptime
     await zk.sendMessage(dest, {
-      text: `🕒Uptime bot running 24/7\nRuntime: ${formattedRuntime}`,
+      text: `🕒Uptime bot running 24/7\nbot Runtime on: ${formattedRuntime}\n after 25 minutes check . uptime again\n Ultra-Fast Response 80ms\n90ms\nUltra-Fast Response: ${formattedRuntime}\n`,
       contextInfo: {
         mentionedJid: [dest.sender || ""],
         externalAdReply: {
