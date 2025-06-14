@@ -31,7 +31,7 @@ fana({
   }
 
   try {
-    const searchResponse = await axios.get(`https:                                    
+    const searchResponse = await axios.get(`https://bk9.fun/search/apk?q=${appName}`);                                 
     const searchData = searchResponse.data;
 
     if (!searchData.BK9 || searchData.BK9.length === 0) {
@@ -50,8 +50,7 @@ fana({
       });
       return;
     }
-
-    const appDetailsResponse = await axios.get(`//bk9.fun/search/apk?q=${appName}`);
+    const appDetailsResponse = await axios.get(`https://bk9.fun/search/apk?q=${appName}`);
     const searchData = searchResponse.data;
 
     if (!searchData.BK9 || searchData.BK9.length === 0) {
