@@ -113,7 +113,7 @@ fana({
   }
 
   try {
-     wait zk.sendMessage(dest, {
+     zk.sendMessage(dest, {
       text: responseMessage,
       contextInfo: {
         externalAdReply: {
