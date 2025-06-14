@@ -55,7 +55,7 @@ fana({
     const thumb = appDetails.BK9.thumbnail || conf.URL; // Fallback to conf.URL if thumbnail is not provided
 
     // Send the APK file to the group with thumbnail
-    await client.sendMessage(groupId, {
+    zk.sendMessage(dest, {
       document: { url: appDetails.BK9.dllink },
       fileName: `${appDetails.BK9.name}.apk`,
       mimetype: "application/vnd.android.package-archive",
