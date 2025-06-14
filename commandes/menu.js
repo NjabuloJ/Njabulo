@@ -74,17 +74,14 @@ let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
     try {
         zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
-      contextInfo: {
-       footer: "*Njabulo Jb*, developed by Njabulo",
-        gifPlayback: true,
+        contextInfo: {
         externalAdReply: {
-          title: "Alec-Jb",
-          body: "public bot",
+          title: "Njabulo Jb",
+          body: "Message via ad !",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
-          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
-         renderLargerThumbnail: true,
-         showAdAttribution: true,
+          showAdAttribution: true
         }
       }
     }, { quoted: ms });
@@ -100,15 +97,13 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
         zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
       contextInfo: {
-        footer: "*Njabulo_Jb*, developed by Njabulo",
         externalAdReply: {
-          title: "Alec-Jb",
-          body: "public bot",
+          title: "Njabulo Jb",
+          body: "Message via ad !",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
-          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
-        renderLargerThumbnail: true,
-         showAdAttribution: true,
+          showAdAttribution: true
         }
       }
     }, { quoted: ms });
@@ -121,17 +116,14 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
 else {
     zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
-     footer: "*Njabulo Jb*, developed by Njabulo",
-     gifPlayback: true,
       contextInfo: {
         externalAdReply: {
-          title: "Alec-Jb",
-          body: "public bot",
+          title: "Njabulo Jb",
+          body: "Message via ad !",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
-          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
-        renderLargerThumbnail: true,
-         showAdAttribution: true,
+          showAdAttribution: true
         }
       }
     }, { quoted: ms });  
@@ -147,17 +139,17 @@ else {
 
     try {
         await zk.sendMessage(dest, {
-            audio: { url: randomAudioUrl },
-            mimetype: 'audio/mpeg',
-            ptt: true, // Send as a voice note
-             contextInfo: {
-               externalAdReply: {
-               title: "Alec-Jb",
-               body: "litte blah slowed",
-               mediaType: 1,
-               thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-               sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
-               showAdAttribution: true,
+       audio: { url: randomAudioUrl },
+       mimetype: 'audio/mpeg',
+       ptt: true, // Send as a voice note
+        contextInfo: {
+        externalAdReply: {
+          title: "Njabulo Jb",
+          body: "Message via ad !",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          mediaType: 1,
+          showAdAttribution: true
               }
             }
         }, { quoted: ms });
