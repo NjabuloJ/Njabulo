@@ -32,8 +32,9 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
     moment.tz.setDefault ("Africa/nairobi");
 
 // Créer une date et une heure en GMT
-const temps = moment().format('HH:mm:ss');
-const date = moment().format('DD/MM/YYYY');
+  const temps = moment().format('HH:mm:ss');
+  const date = moment().format('DD/MM/YYYY');
+  const imgs = 'https://files.catbox.moe/73h91g.jpg';
 
   let infoMsg =  `
 *╭─•❖ 𓆩 🦋 𓆪 ❖•─╮*
@@ -73,6 +74,7 @@ let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
         zk.sendMessage(dest, {
+       image: { url: img },
       text: infoMsg + menuMsg,
         contextInfo: {
         externalAdReply: {
@@ -95,6 +97,7 @@ let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
         zk.sendMessage(dest, {
+       image: { url: img },
       text: infoMsg + menuMsg,
       contextInfo: {
         externalAdReply: {
@@ -115,6 +118,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
 } 
 else {
     zk.sendMessage(dest, {
+     image: { url: img },
       text: infoMsg + menuMsg,
       contextInfo: {
         externalAdReply: {
