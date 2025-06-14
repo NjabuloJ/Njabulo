@@ -40,7 +40,7 @@ async function convertToMp3(inputPath, outputPath) {
 fana({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
     const { msgRepondu, repondre } = commandeOptions;
 
-    if (!msgRepondu) {
+    if (!repondre) {
       zk.sendMessage(dest, {
       text: '😡Yo stop slacking! Give me a query, like .\nPlease reply to an image, video, or audio file.',
       contextInfo: {
