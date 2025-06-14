@@ -40,8 +40,8 @@ const handleAiCommand = async (dest, zk, params, url, usageExample) => {
         externalAdReply: {
           title: conf.BOT,
           body: "Keep learning",
-          thumbnailUrl: conf.URL,
-          sourceUrl: "https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
           showAdAttribution: true,
         },
@@ -69,7 +69,7 @@ fana({
   reaction: '⚔️',
   categorie: "AI"
 }, async (dest, zk, params) => {
-  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/BK93?BK9=you%20are%20zoro%20from%20one%20piece&q=", "Hello there, This is BELTAH-MD BOT, How may I help you with?");
+  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/BK93?BK9=you%20are%20zoro%20from%20one%20piece&q=", "Hello there, This is Njabulo Jb WhatsApp bot, How may I help you with?");
 });
 
 fana({
@@ -119,8 +119,8 @@ fana({
         externalAdReply: {
           title: conf.BOT,
           body: "keep learning wit BELTAH-MD",
-          thumbnailUrl: conf.URL,
-          sourceUrl: "https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
           showAdAttribution: true,
         },
