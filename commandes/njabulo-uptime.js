@@ -3,9 +3,18 @@ const moment = require("moment-timezone");
 const { getBuffer } = require("../njabulo/dl/Function");
 const { default: axios } = require('axios');
 
-const AUDIO_URL = "https://files.catbox.moe/7ydtb3.mp3"; // New audio URL
-const THUMBNAIL_URL = "https://files.catbox.moe/gsdha7.jpg"; // New image URL
+//uptime hh mm ss
+    moment.tz.setDefault("Africa/Dar_es_Salaam");
+    const hour = moment().hour();
+    let greeting = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ";
+    if (hour >= 12 && hour < 18) greeting = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ!";
+    else if (hour >= 18) greeting = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ!";
+    else if (hour >= 22 || hour < 5) greeting = "ɢᴏᴏᴅ ɴɪɢʜᴛ";
 
+    const temps = moment().format('HH:mm:ss');
+    const date = moment().format('DD/MM/YYYY');
+
+//uptime seconds
 const runtime = function (seconds) { 
  seconds = Number(seconds); 
  var d = Math.floor(seconds / (3600 * 24)); 
@@ -33,7 +42,7 @@ fana({ nomCom: 'uptime',
       
     try {
         await zk.sendMessage(dest, { 
-        text:  `*ɴנαʙυʟσ ᴊв ᴜᴘтιмє:: ${runtime(process.uptime())}*`,
+        text:  `*ɴנαʙυʟσ ᴊв ᴜᴘтιмє:: ${runtime(process.uptime())}* hallo: ${greeting}`,
          contextInfo: {
             externalAdReply: {
              title: "Njabulo Jb",
