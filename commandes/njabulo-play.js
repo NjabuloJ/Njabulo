@@ -53,6 +53,9 @@ fana({
         }
       }
     });
+    return;
+  }
+
     const firstVideo = searchResults.videos[0];
     const videoUrl = firstVideo.url;
 
