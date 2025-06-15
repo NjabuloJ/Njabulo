@@ -680,7 +680,20 @@ zk.ev.on('group-participants.update', async (group) => {
 
             msg += `read the group description to avoid getting removeved🧏 `;
 
-            zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
+            zk.sendMessage(group.id, {
+              image: { url: ppgroup },
+              caption: msg,
+               contextInfo: {
+               externalAdReply: {
+               title: "Njabulo Jb",
+               body: membres,
+               thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+              sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+              mediaType: 1,
+             showAdAttribution: true
+                }
+               }
+            });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
             let msg = `one or somes member(s) left group;🤷\n l will miss you goodbye🚮\n`;
 
@@ -689,7 +702,19 @@ zk.ev.on('group-participants.update', async (group) => {
                 msg += `@${membre.split("@")[0]}\n`;
             }
 
-            zk.sendMessage(group.id, { text: msg, mentions: membres });
+            zk.sendMessage(group.id, { 
+                text: msg,
+                 contextInfo: {
+                  externalAdReply: {
+                 title: "Njabulo Jb",
+                 body: membres,
+                 thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+                 sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+                 mediaType: 1,
+                 showAdAttribution: true
+                  }
+                }
+            });
 
         } else if (group.action == 'promote' && (await recupevents(group.id, "antipromote") == 'on') ) {
             //  console.log(zk.user.id)
