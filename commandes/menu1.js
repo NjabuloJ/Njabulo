@@ -35,16 +35,15 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-*╭─•❖ 𓆩 🦋 𓆪 ❖•─╮*
-  𝐀𝐋𝐄𝐂-𝐉𝐁 𝐏𝐔𝐁𝐋𝐈𝐂 
-*╰─•❖ 𓆩 🦋 𓆪 ❖•─╯* 
-*╭─❖*
-*┋🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
-*┋📅 ᴅᴀᴛᴇ:* ${date}
-*┋⏰ ᴛɪᴍᴇ:* ${temps}
-*┋🏹ᴘʀᴇғɪx: [ ${prefixe} ]*
-*┋📟ᴘʟᴜɢɪɴs ᴄᴍᴅ:* ${cm.length}
-*╰─❖*
+╭─•❖ 𓆩 🦋 𓆪 ❖•─╮
+╰─•❖ 𓆩 🦋 𓆪 ❖•─╯
+╭─❖
+┋□ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ
+┋□ ᴅᴀᴛᴇ: ${date}
+┋□ ᴛɪᴍᴇ: ${temps}
+┋□ᴘʀᴇғɪx: *[ ${prefixe} ]*
+┋□ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}
+╰─❖
 `;
 
    var lien = mybotpic();
@@ -60,8 +59,8 @@ const date = moment().format('DD/MM/YYYY');
           title: "Alec-Jb",
           body: "public bot",
           mediaType: 1,
-          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
          renderLargerThumbnail: true,
          showAdAttribution: true,
         }
@@ -84,8 +83,8 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
           title: "Alec-Jb",
           body: "public bot",
           mediaType: 1,
-          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
         renderLargerThumbnail: true,
          showAdAttribution: true,
         }
@@ -107,8 +106,8 @@ else {
           title: "Alec-Jb",
           body: "public bot",
           mediaType: 1,
-          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
         renderLargerThumbnail: true,
          showAdAttribution: true,
         }
