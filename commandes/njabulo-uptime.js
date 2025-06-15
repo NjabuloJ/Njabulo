@@ -6,10 +6,10 @@ const { default: axios } = require('axios');
 //uptime hh mm ss
     moment.tz.setDefault("Africa/Dar_es_Salaam");
     const hour = moment().hour();
-    let greeting = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ";
-    if (hour >= 12 && hour < 18) greeting = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ!";
-    else if (hour >= 18) greeting = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ!";
-    else if (hour >= 22 || hour < 5) greeting = "ɢᴏᴏᴅ ɴɪɢʜᴛ";
+    let greeting = "Good morning";
+    if (hour >= 12 && hour < 18) greeting = "Good afternoon!";
+    else if (hour >= 18) greeting = "Good evening!";
+    else if (hour >= 22 || hour < 5) greeting = "Good night";
 
     const temps = moment().format('HH:mm:ss');
     const date = moment().format('DD/MM/YYYY');
@@ -42,7 +42,7 @@ fana({ nomCom: 'uptime',
       
     try {
         await zk.sendMessage(dest, { 
-        text:  `*🚀 SYSTEM UPTIME 🔋\n\n🕒 System Time: ${temps}\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\nDuration: ${runtime(process.uptime())}\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.98%\n Stability: 96%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\n*🌐 Njabulo JB online date* \n Uptime days: ${greeting}\n`,
+        text:  `*🚀 SYSTEM UPTIME* 🔋\n\n🕒 System Time: ${temps}\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\nDuration: ${runtime(process.uptime())}\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.98%\n Stability: 96%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\n*🌐 Njabulo JB online date* \n Uptime days: ${greeting}\n`,
          contextInfo: {
             externalAdReply: {
              title: "Njabulo Jb",
