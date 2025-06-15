@@ -98,15 +98,7 @@ fana({
     // Prepare the message payload with external ad details
     const messagePayloads = [
       {
-      caption: `\n*LUCKY MD AUDIOS*\n
-╭┈┈┈⊷
-┊ *Made:* in Arusha Tanzania 
-┊ *Quality:* High
-┊ *Powered:* by FrediEtech 
-╰┈┈┈┈┈┈┈┈┈┈┈┈┈⊷
-🌐 *Bot Repo:* https://github.com/Fred1e/LUCKY_MD
-
-> regards frediezra`,
+      caption: `•`,
         video: { url: downloadUrl },
         mimetype: 'video/mp4',
         contextInfo: {
