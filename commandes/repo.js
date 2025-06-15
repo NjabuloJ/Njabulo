@@ -36,12 +36,11 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭─❖
-┋□ original git
-┋□ https://github.com/NjabuloJ/Njabulo-Jb
-┋□ oll repo
-┋□ https://github.com/NiabuloJ/njabulo-office-repo
-┋□ General by Njabulo JB technology
+┋□ 🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
+┋□ 🌟 star *[1]* 🍴fork *[2]*
 ╰─❖
+
+*GitHub* https://github.com/NjabuloJ/Njabulo-Jb
 `;
 
    var lien = mybotpic();
