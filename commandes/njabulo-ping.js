@@ -6,9 +6,15 @@ const os = require("os");
 const moment = require("moment-timezone");
 const set = require(__dirname + "/../set");
 
-const AUDIO_URL = "https://files.catbox.moe/3o8hia.mp3"; // New audio URL
-const THUMBNAIL_URL = "https://files.catbox.moe/03i374.jpg"; // New image URL
+//uptime hh mm ss
+    moment.tz.setDefault("Africa/Dar_es_Salaam");
+    const hour = moment().hour();
+    let greeting = "Good morning";
+    if (hour >= 12 && hour < 18) greeting = "Good afternoon!";
+    else if (hour >= 18) greeting = "Good evening!";
+    else if (hour >= 22 || hour < 5) greeting = "Good night";
 
+//ping time
 moment.tz.setDefault(`${set.TZ}`);
 
 const getTimeAndDate = () => {
@@ -26,7 +32,7 @@ fana({ nomCom: "ping", categorie: "General" }, async (dest, zk, commandeOptions)
 
     try {
         await zk.sendMessage(dest, { 
-            text: `*bot pong! running on: ${ping}ms*`,
+            text: `*🚀 SYSTEM PONG* 🔋\n\n🕒 System Time: ${temps\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\nDuration pong: ${ping}ms\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.98%\n Stability: 96%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\n*🌐 Njabulo JB online date* \n Uptime days: ${greeting}`,
              contextInfo: {
              externalAdReply: {
              title: "Njabulo Jb",
