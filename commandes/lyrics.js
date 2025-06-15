@@ -51,12 +51,7 @@ fana({
   }
 
   const { title, artist, thumb, lyrics } = lyricsData.result;
-  const imageUrl = thumb || "https://files.catbox.moe/b2vql7.jpg"; // Fallback image
-
   try {
-    // Download album art
-    const imageResponse = await axios.get(imageUrl, { responseType: "arraybuffer" });
-    
     await zk.sendMessage(dest, {
       caption: `🎶 *${title}* - ${artist}\n\n${lyrics}\n\n*Powered by Njabulo Jb*`,
       contextInfo: {
@@ -70,7 +65,7 @@ fana({
           externalAdReply: {
           title: "Lyrics Finder",
           body: "Get any song lyrics instantly",
-          thumbnail: await (await axios.get(imageUrl, { responseType: "arraybuffer" })).data,
+          thumbnail: "jb",
           mediaType: 1,
           mediaUrl: "",
           sourceUrl: ""
