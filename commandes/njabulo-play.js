@@ -40,9 +40,19 @@ fana({
 
     // Check if any videos were found
     if (!searchResults || !searchResults.videos.length) {
-      return repondre('No song found for the specified query.');
-    }
-
+       zk.sendMessage(dest, {
+      text: '😡No song found for the specified query.',
+      contextInfo: {
+        externalAdReply: {
+          title: "Njabulo Jb",
+          body: "Message via ad !",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          mediaType: 1,
+          showAdAttribution: true
+        }
+      }
+    });
     const firstVideo = searchResults.videos[0];
     const videoUrl = firstVideo.url;
 
