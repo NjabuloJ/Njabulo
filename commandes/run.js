@@ -40,7 +40,7 @@ fana({
     const videoDetails = downloadData.result;
  
     await zk.sendMessage(dest, {
-      text: `⏳loading••••••: ${videoDetails.title},
+      text: `⏳loading••••••: ${videoDetails.title}`,
         contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
