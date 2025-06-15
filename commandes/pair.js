@@ -87,9 +87,9 @@ zk.sendMessage(dest, {
           sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
           showAdAttribution: true
-         },
-        },
-      }, { quoted: ms });
+        }
+       }
+      });
 
     } else {
       throw new Error("Invalid response from API.");
@@ -106,8 +106,8 @@ zk.sendMessage(dest, {
           sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
           showAdAttribution: true
-         },
-        },
-      }, { quoted: ms });
+        }
+       }
+     });
   }
 });
