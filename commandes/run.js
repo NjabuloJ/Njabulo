@@ -38,7 +38,7 @@ fana({
     // Perform a YouTube search based on the query
     const searchResults = await ytSearch(query);
     await zk.sendMessage(dest, {
-      text: `⏳loading••••••: ${videoDetails.title}`,
+      text: `⏳loading••••••: ${video.title}`,
         contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
