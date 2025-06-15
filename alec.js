@@ -851,8 +851,20 @@ zk.ev.on('group-participants.update', async (group) => {
 
                  let cmsg =`      
                 🤖 Njabulo Jb is connected to device🤖`;
-                await zk.sendMessage(zk.user.id, { text: cmsg });
-                }
+                await zk.sendMessage(zk.user.id, { 
+                  text: cmsg,
+                   contextInfo: {
+                   externalAdReply: {
+                   title: "Njabulo Jb",
+                    body: "Message via ad !",
+                    thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+                    sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+                    mediaType: 1,
+                   showAdAttribution: true
+                   }
+                 }
+                });
+               }
             }
             else if (connection == "close") {
                 let raisonDeconnexion = new boom_1.Boom(lastDisconnect?.error)?.output.statusCode;
