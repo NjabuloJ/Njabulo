@@ -27,7 +27,7 @@ fana({ nomCom: "pig", categorie: "General" }, async (dest, zk, commandeOptions) 
 
     try {
         await zk.sendMessage(dest, { 
-            text: `ɴנαʙυʟσ ᴊв ѕρєєᴅ: ${ping}ms jh: ${time}`,
+            text: `*🚀 SYSTEM PING* 🔋\n\n🕒 System Time: ${time}\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\nDuration pong: ${ping}ms}\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.${ping}%\n Stability: ${ping}%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\n`,
             contextInfo: {
               isForwarded: true,
               forwardedNewsletterMessageInfo: {
