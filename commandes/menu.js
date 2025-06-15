@@ -37,19 +37,19 @@ fana({ nomCom: "allmenu", categorie: "General" }, async (dest, zk, commandeOptio
   const img = 'https://files.catbox.moe/73h91g.jpg';
 
   let infoMsg =  `
-❖ *Oll commands on Njabulo Jb:* ${cm.length}*
+□ *Oll commands on Njabulo Jb:* ${cm.length}*
 `;
     
     
-let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
+let menuMsg = `*Available Commands by Njabulo Jb*`;
 
     for (const cat in coms) {
         menuMsg += `
-❖ *${cat}*
+□ *${cat}*
 `;
         for (const cmd of coms[cat]) {
             menuMsg += `
-❖ ${cmd}`;
+□ ${cmd}`;
         }
         menuMsg += `
 \n`
@@ -124,9 +124,7 @@ else {
     
        // message down on menu
       let infoMsgs =  `
-*╭─•❖ 𓆩 🦋 𓆪 ❖•─╮*
-  *Loading oll commands*
-*╰─•❖ 𓆩 🦋 𓆪 ❖•─╯* 
+  *Loading oll commands* 
 *╭─❖*
 *┋🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
 *╰─❖*
@@ -139,7 +137,7 @@ else {
         contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
-          body: "Message via ad !",
+          body: "Message ollmenu !",
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
