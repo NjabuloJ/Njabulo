@@ -40,6 +40,16 @@ fana({
  
     await zk.sendMessage(dest, {
       text: "⏳loading•••••••••••••\n\n⌚ wait are second•••••••••••••\n*🎧vw golf youtube downloaded you audio*✓",
+            contextInfo: {
+        externalAdReply: {
+          title: "Njabulo Jb",
+          body: "Message via ad !",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          mediaType: 1,
+          showAdAttribution: true
+        }
+       }
     }, { quoted: ms });
 
     // Check if any videos were found
