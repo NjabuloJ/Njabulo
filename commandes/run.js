@@ -37,10 +37,11 @@ fana({
   try {
     // Perform a YouTube search based on the query
     const searchResults = await ytSearch(query);
+    const videoDetails = downloadData.result;
  
     await zk.sendMessage(dest, {
-      text: "⏳loading•••••••••••••\n\n⌚ wait are second•••••••••••••\n*🎧vw golf youtube downloaded you audio*✓",
-            contextInfo: {
+      text: `⏳loading••••••: ${videoDetails.title},
+        contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
           body: "Message via ad !",
