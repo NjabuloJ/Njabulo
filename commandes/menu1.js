@@ -35,8 +35,6 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-╭─•❖ 𓆩 🦋 𓆪 ❖•─╮
-╰─•❖ 𓆩 🦋 𓆪 ❖•─╯
 ╭─❖
 ┋□ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ
 ┋□ ᴅᴀᴛᴇ: ${date}
@@ -56,8 +54,8 @@ const date = moment().format('DD/MM/YYYY');
        footer: "*Njabulo Jb*, developed by Njabulo",
         gifPlayback: true,
         externalAdReply: {
-          title: "Alec-Jb",
-          body: "public bot",
+          title: "Njabulo Jb",
+          body: "Message menu",
           mediaType: 1,
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
@@ -80,8 +78,8 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
       contextInfo: {
         footer: "*Njabulo_Jb*, developed by Njabulo",
         externalAdReply: {
-          title: "Alec-Jb",
-          body: "public bot",
+          title: "Njabulo Jb",
+          body: "Message menu",
           mediaType: 1,
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
@@ -103,8 +101,8 @@ else {
      gifPlayback: true,
       contextInfo: {
         externalAdReply: {
-          title: "Alec-Jb",
-          body: "public bot",
+          title: "Njabulo Jb",
+          body: "Message menu",
           mediaType: 1,
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
@@ -120,30 +118,31 @@ else {
         "https://files.catbox.moe/s12zlw.mp3" // New song added
     ];
 
-    // Select a random audio file
-    const randomAudioUrl = audioUrls[Math.floor(Math.random() * audioUrls.length)];
+    // Select menu loading
+          let infoMsgs =  `
+  *Loading oll commands* 
+*╭─❖*
+*┋🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
+*╰─❖*
+
+> sir Njabulo Jb`;
 
     try {
         await zk.sendMessage(dest, {
-            audio: { url: randomAudioUrl },
-            mimetype: 'audio/mpeg',
-            ptt: true, // Send as a voice note
-             contextInfo: {
-               externalAdReply: {
-               title: "Alec-Jb",
-               body: "litte blah slowed",
-               mediaType: 1,
-               thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-               sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
-               showAdAttribution: true,
+       text: infoMsgs,
+        contextInfo: {
+        externalAdReply: {
+          title: "Njabulo Jb",
+          body: "Message ollmenu !",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          mediaType: 1,
+          showAdAttribution: true
               }
             }
         }, { quoted: ms });
     } catch (e) {
-        console.log("🥵🥵 Error sending audio: " + e);
-        repondre("🥵🥵 Error sending audio: " + e);
+        console.log("🥵🥵 Error sending menu: " + e);
+        repondre("🥵🥵 Error sending menu: " + e);
     }
 });
-
-      
-
