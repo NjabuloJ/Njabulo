@@ -14,15 +14,8 @@ const set = require(__dirname + "/../set");
     else if (hour >= 18) greeting = "Good evening!";
     else if (hour >= 22 || hour < 5) greeting = "Good night";
 
-//ping time
-moment.tz.setDefault(`${set.TZ}`);
-
-const getTimeAndDate = () => {
-    return {
         time: moment().format('HH:mm:ss'),
         date: moment().format('DD/MM/YYYY')
-    };
-};
 
 // Ping Command
 fana({ nomCom: "ping", categorie: "General" }, async (dest, zk, commandeOptions) => {
@@ -32,7 +25,7 @@ fana({ nomCom: "ping", categorie: "General" }, async (dest, zk, commandeOptions)
 
     try {
         await zk.sendMessage(dest, { 
-            text: `*🚀 SYSTEM PONG* 🔋\n\n🕒 System Time: ${temps\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\nDuration pong: ${ping}ms\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.98%\n Stability: 96%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\n*🌐 Njabulo JB online date* \n Uptime days: ${greeting}`,
+            text: `*🚀 SYSTEM PONG* 🔋\n\n🕒 System Time: ${time}\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\nDuration pong: ${ping}ms\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.98%\n Stability: 96%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\n*🌐 Njabulo JB online date* \n Uptime days: ${greeting}`,
              contextInfo: {
              externalAdReply: {
              title: "Njabulo Jb",
