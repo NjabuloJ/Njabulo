@@ -39,8 +39,8 @@ const date = moment().format('DD/MM/YYYY');
 ┋□ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ
 ┋□ ᴅᴀᴛᴇ: ${date}
 ┋□ ᴛɪᴍᴇ: ${temps}
-┋□ᴘʀᴇғɪx: *[ ${prefixe} ]*
-┋□ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}
+┋□ ᴘʀᴇғɪx: *[ ${prefixe} ]*
+┋□ type *[ollmenu]* see cmd
 ╰─❖
 `;
 
