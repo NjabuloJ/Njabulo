@@ -3,6 +3,29 @@ const moment = require("moment-timezone");
 const { getBuffer } = require("../njabulo/dl/Function");
 const { default: axios } = require('axios');
 
+//uptime Get current date and time
+    const now = new Date();
+    
+    // Get local time and date in the specified timezone
+    const options = { 
+      hour: "2-digit", 
+      minute: "2-digit", 
+      second: "2-digit", 
+      hour12: true, 
+      timeZone: timezone 
+    };
+
+    const timeOptions = { 
+      ...options, 
+      weekday: "long", 
+      year: "numeric", 
+      month: "long", 
+      day: "numeric" 
+    };
+
+    const localTime = now.toLocaleTimeString("en-US", options);
+    const localDate = now.toLocaleDateString("en-US", timeOptions);
+
 //uptime hh mm ss
     moment.tz.setDefault("Africa/Dar_es_Salaam");
     const hour = moment().hour();
@@ -42,7 +65,7 @@ fana({ nomCom: 'uptime',
       
     try {
         await zk.sendMessage(dest, { 
-        text:  `*🚀 SYSTEM UPTIME 🔋\n\n🕒 System Time: ${temps}\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\nDuration: ${runtime(process.uptime())}\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.98%\n Stability: 96%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\n*🌐 Njabulo JB online date* \n Uptime days: ${greeting}`,
+        text:  `*🚀 SYSTEM UPTIME 🔋\n\n🕒 System Time: ${temps}\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\nDuration: ${runtime(process.uptime())}\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.98%\n Stability: 96%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\n*🌐 Njabulo JB online date* \n Uptime days: ${greeting}\n🕰️ *Current Local Time* : ${localTime}\n📅 *Current Date:* ${localDate}`,
          contextInfo: {
             externalAdReply: {
              title: "Njabulo Jb",
