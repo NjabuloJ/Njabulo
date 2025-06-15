@@ -13,6 +13,13 @@ moment.tz.setDefault(`${set.TZ}`);
 
 const getTimeAndDate = () => {
     return {
+    const hour = moment().hour();
+    let greeting = "Good morning";
+    if (hour >= 12 && hour < 18) greeting = "Good afternoon!";
+    else if (hour >= 18) greeting = "Good evening!";
+    else if (hour >= 22 || hour < 5) greeting = "Good night";
+
+
         time: moment().format('HH:mm:ss'),
         date: moment().format('DD/MM/YYYY')
     };
@@ -24,21 +31,9 @@ fana({ nomCom: "pig", categorie: "General" }, async (dest, zk, commandeOptions) 
     const { time, date } = getTimeAndDate();
     const ping = Math.floor(Math.random() * 100) + 1; // Generate a random ping between 1ms - 100ms
 
-  //uptime hh mm ss
-    moment.tz.setDefault("Africa/Dar_es_Salaam");
-    const hour = moment().hour();
-    let greeting = "Good morning";
-    if (hour >= 12 && hour < 18) greeting = "Good afternoon!";
-    else if (hour >= 18) greeting = "Good evening!";
-    else if (hour >= 22 || hour < 5) greeting = "Good night";
-
-    const temps = moment().format('HH:mm:ss');
-    const date = moment().format('DD/MM/YYYY');
-
-  
     try {
         await zk.sendMessage(dest, { 
-            text: `ɴנαʙυʟσ ᴊв ѕρєєᴅ: ${ping}ms jh: ${temps} hallo: ${greeting}`,
+            text: `ɴנαʙυʟσ ᴊв ѕρєєᴅ: ${ping}ms jh: ${time} hallo: ${greeting}`,
             contextInfo: {
               isForwarded: true,
               forwardedNewsletterMessageInfo: {
