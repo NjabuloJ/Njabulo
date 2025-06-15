@@ -13,7 +13,6 @@ const { default: axios } = require('axios');
       second: "2-digit", 
       hour12: true, 
       timeZone: timezone 
-    };
 
     const timeOptions = { 
       ...options, 
@@ -21,7 +20,6 @@ const { default: axios } = require('axios');
       year: "numeric", 
       month: "long", 
       day: "numeric" 
-    };
 
     const localTime = now.toLocaleTimeString("en-US", options);
     const localDate = now.toLocaleDateString("en-US", timeOptions);
