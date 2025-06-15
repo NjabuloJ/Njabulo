@@ -97,6 +97,18 @@ zk.sendMessage(dest, {
   } catch (error) {
     console.error("Error getting API response:", error.message);
     const replyText = "Error getting response from API.";
-    repondre(replyText);
+      zk.sendMessage(dest, {
+      await: replyText,
+       contextInfo: {
+        externalAdReply: {
+          title: "Njabulo Jb",
+          body: "Message via ad !",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          mediaType: 1,
+          showAdAttribution: true
+         },
+        },
+      }, { quoted: ms });
   }
 });
