@@ -96,9 +96,9 @@ zk.sendMessage(dest, {
     }
   } catch (error) {
     console.error("Error getting API response:", error.message);
-    const replyText = "Error getting response from API.";
+    const replText = "Error getting response from API.";
       zk.sendMessage(dest, {
-      await: replyText,
+      await: replText,
        contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
