@@ -38,15 +38,18 @@ fana({
     // Perform a YouTube search based on the query
     const searchResults = await ytSearch(query);
     await zk.sendMessage(dest, {
-      text: `⏳loading••••••: ${firstVideo.title}`,
-        contextInfo: {
+      text: "loading audio",
+      contextInfo: {
+       footer: "*Njabulo Jb*, developed by Njabulo",
+        gifPlayback: true,
         externalAdReply: {
           title: "Njabulo Jb",
-          body: "Message via ad !",
-          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          body: "Message menu",
           mediaType: 1,
-          showAdAttribution: true
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         renderLargerThumbnail: true,
+         showAdAttribution: true,
         }
        }
     }, { quoted: ms });
@@ -118,17 +121,19 @@ fana({
 🌐 *Bot Repo:* https://github.com/Fred1e/LUCKY_MD
 
 > regards frediezra`,
-        audio: { url: downloadUrl },
-        mimetype: 'audio/mp4',
-        contextInfo: {
-          externalAdReply: {
-            title: conf.BOT,
-            body: videoDetails.title,
-            mediaType: 1,
-            sourceUrl: conf.GURL,
-            thumbnailUrl: firstVideo.thumbnail,
-            renderLargerThumbnail: false,
-            showAdAttribution: true,
+      audio: { url: downloadUrl },
+      mimetype: 'audio/mp4',
+      contextInfo: {
+       footer: "*Njabulo Jb*, developed by Njabulo",
+        gifPlayback: true,
+        externalAdReply: {
+          title: "Njabulo Jb",
+          body: videoDetails.title,
+          mediaType: 1,
+         thumbnailUrl: firstVideo.thumbnail,
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         renderLargerThumbnail: true,
+         showAdAttribution: true,
           },
         },
       }
