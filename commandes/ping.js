@@ -13,12 +13,6 @@ moment.tz.setDefault(`${set.TZ}`);
 
 const getTimeAndDate = () => {
     return {
-    const hour = moment().hour();
-    let greeting = "Good morning";
-    if (hour >= 12 && hour < 18) greeting = "Good afternoon!";
-    else if (hour >= 18) greeting = "Good evening!";
-    else if (hour >= 22 || hour < 5) greeting = "Good night";
-
 
         time: moment().format('HH:mm:ss'),
         date: moment().format('DD/MM/YYYY')
@@ -33,7 +27,7 @@ fana({ nomCom: "pig", categorie: "General" }, async (dest, zk, commandeOptions) 
 
     try {
         await zk.sendMessage(dest, { 
-            text: `ɴנαʙυʟσ ᴊв ѕρєєᴅ: ${ping}ms jh: ${time} hallo: ${greeting}`,
+            text: `ɴנαʙυʟσ ᴊв ѕρєєᴅ: ${ping}ms jh: ${time}`,
             contextInfo: {
               isForwarded: true,
               forwardedNewsletterMessageInfo: {
