@@ -37,8 +37,6 @@ fana({
   try {
     // Perform a YouTube search based on the query
     const searchResults = await ytSearch(query);
-    const videoDetails = downloadData.result;
- 
     await zk.sendMessage(dest, {
       text: `⏳loading••••••: ${videoDetails.title}`,
         contextInfo: {
