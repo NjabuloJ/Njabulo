@@ -42,7 +42,7 @@ fana({ nomCom: 'uptime',
       
     try {
         await zk.sendMessage(dest, { 
-        text:  `*ɴנαʙυʟσ ᴊв ᴜᴘтιмє:: ${runtime(process.uptime())}* hallo: ${greeting}`,
+        text:  `*🚀 SYSTEM UPTIME 🔋\n\n🕒 System Time: ${temps}\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\nDuration: ${runtime(process.uptime())}\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.98%\n Stability: 96%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*□□□□□□□□□□□□□□□□□□□□□□□□□□*\n*🌐 Njabulo JB online date* \n Uptime days: ${greeting}`,
          contextInfo: {
             externalAdReply: {
              title: "Njabulo Jb",
