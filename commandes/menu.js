@@ -65,14 +65,6 @@ let menuMsg = `*Available Commands by Njabulo Jb*`;
         zk.sendMessage(dest, {
        image: { url: img },
       text: infoMsg + menuMsg,
-        contextInfo: {
-        externalAdReply: {
-          title: "Njabulo Jb",
-          body: "Message via ad !",
-          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          mediaType: 1,
-          showAdAttribution: true
         }
       }
     }, { quoted: ms });
@@ -88,14 +80,6 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
         zk.sendMessage(dest, {
        image: { url: img },
       text: infoMsg + menuMsg,
-      contextInfo: {
-        externalAdReply: {
-          title: "Njabulo Jb",
-          body: "Message via ad !",
-          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          mediaType: 1,
-          showAdAttribution: true
         }
       }
     }, { quoted: ms });
@@ -109,14 +93,6 @@ else {
     zk.sendMessage(dest, {
      image: { url: img },
       text: infoMsg + menuMsg,
-      contextInfo: {
-        externalAdReply: {
-          title: "Njabulo Jb",
-          body: "Message via ad !",
-          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          mediaType: 1,
-          showAdAttribution: true
         }
       }
     }, { quoted: ms });  
