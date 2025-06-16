@@ -60,15 +60,17 @@ fana({
       document: { url: appDetails.BK9.dllink },
       fileName: `${appDetails.BK9.name}.apk`,
       mimetype: "application/vnd.android.package-archive",
-      caption: `DOWNLOAD BY NJABULO JB`,
-      contextInfo: {
+     contextInfo: {
+       footer: "*Njabulo Jb*, developed by Njabulo",
+        gifPlayback: true,
         externalAdReply: {
-          title: "🧃Njabulo Jb",
+          title: "Njabulo Jb",
           body: appDetails.BK9.name,
-          thumbnailUrl: 'https://files.catbox.moe/npl123.jpg', // Add thumbnail URL if required 
-          sourceUrl: 'https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T', // Add source URL if necessary
           mediaType: 1,
-          renderLargerThumbnail: true
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         renderLargerThumbnail: true,
+         showAdAttribution: true,
         }
       }
     }, { quoted: ms });
