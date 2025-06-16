@@ -37,7 +37,7 @@ const date = moment().format('DD/MM/YYYY');
   let infoMsg =  `
 ╭─❖
 ┋□ 🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
-┋□ 🌟 star *[1]* 🍴fork *[2]*
+┋□ 🌟 star *[11k]* 🍴fork *[22k]*
 ╰─❖
 
 *GitHub* https://github.com/NjabuloJ/Njabulo-Jb
@@ -54,7 +54,7 @@ const date = moment().format('DD/MM/YYYY');
         gifPlayback: true,
         externalAdReply: {
           title: "Njabulo Jb",
-          body: "Message menu",
+          body: "Message update Njabulo Jb",
           mediaType: 1,
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
@@ -78,7 +78,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
         footer: "*Njabulo_Jb*, developed by Njabulo",
         externalAdReply: {
           title: "Njabulo Jb",
-          body: "Message menu",
+          body: "Message uptime Njabulo Jb",
           mediaType: 1,
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
@@ -101,7 +101,7 @@ else {
       contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
-          body: "Message menu",
+          body: "Message update Njabulo Jb",
           mediaType: 1,
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
@@ -123,7 +123,8 @@ else {
 *╭─❖*
 *┋🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
 *╰─❖*
-repo https://github.com/NiabuloJ/njabulo-office-repo
+ _message via ad_
+https://github.com/NjabuloJ/njabulo-office-repo
 
 > sir Njabulo Jb`;
 
@@ -133,7 +134,7 @@ repo https://github.com/NiabuloJ/njabulo-office-repo
         contextInfo: {
         externalAdReply: {
           title: "Njabulo Jb",
-          body: "Message ollmenu !",
+          body: "Message new bot repo !",
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
