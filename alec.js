@@ -683,14 +683,17 @@ zk.ev.on('group-participants.update', async (group) => {
             zk.sendMessage(group.id, {
               image: { url: ppgroup },
               caption: msg,
-               contextInfo: {
-               externalAdReply: {
-               title: "Njabulo Jb",
-               body: membres,
-               thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-              sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-              mediaType: 1,
-             showAdAttribution: true
+              contextInfo: {
+               footer: "*Njabulo Jb*, developed by Njabulo",
+                gifPlayback: true,
+                externalAdReply: {
+                title: "Njabulo Jb",
+                body: membres,
+                mediaType: 1,
+                 thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+                 sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+                 renderLargerThumbnail: true,
+                 showAdAttribution: true,
                 }
                }
             });
@@ -875,17 +878,27 @@ zk.ev.on('group-participants.update', async (group) => {
                 if((conf.DP).toLowerCase() === 'yes') {     
 
                  let cmsg =`      
-                🤖 Njabulo Jb is connected to device🤖`;
+                
+╭─❖
+┋□ 🕵️ *ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
+┋□ 🌟 connected to device
+╰─❖
+
+*GitHub* https://github.com/NjabuloJ/Njabulo-Jb
+`;
                 await zk.sendMessage(zk.user.id, { 
                   text: cmsg,
-                   contextInfo: {
-                   externalAdReply: {
-                   title: "Njabulo Jb",
-                    body: "Message via ad !",
-                    thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+                  contextInfo: {
+                  footer: "*Njabulo Jb*, developed by Njabulo",
+                  gifPlayback: true,
+                  externalAdReply: {
+                  title: "Njabulo Jb",
+                  body: "Message bot connected",
+                   mediaType: 1,
+                     thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
                     sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-                    mediaType: 1,
-                   showAdAttribution: true
+                    renderLargerThumbnail: true,
+                    showAdAttribution: true,
                    }
                  }
                 });
