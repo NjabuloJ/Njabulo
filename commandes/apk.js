@@ -1,7 +1,7 @@
 const { fana } = require('../njabulo/fana');
 const axios = require('axios');
 const fs = require('fs-extra');
-const { mediafireDl } = require("../framework/dl/Function");
+const { mediafireDl } = require("../njabulo/dl/Function");
 const conf = require(__dirname + "/../set");
 
 fana({
@@ -13,7 +13,7 @@ fana({
   const { arg, ms } = commandeOptions;
 
   const repondre = async (text) => {
-     zk.sendMessage(dest, {
+    wait zk.sendMessage(dest, {
       text: text,
       contextInfo: {
         externalAdReply: {
@@ -56,7 +56,7 @@ fana({
     await repondre(`Downloading ${appDetails.BK9.name}...`);
 
     // Send the APK file to the group with thumbnail
-     zk.sendMessage(dest, {
+    wait zk.sendMessage(dest, {
       document: { url: appDetails.BK9.dllink },
       fileName: `${appDetails.BK9.name}.apk`,
       mimetype: "application/vnd.android.package-archive",
