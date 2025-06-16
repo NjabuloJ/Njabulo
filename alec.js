@@ -678,11 +678,10 @@ zk.ev.on('group-participants.update', async (group) => {
                 msg += ` \n Hey 🖐️ @${membre.split("@")[0]} welcome to group nah🤗. \n\n`;
             }
 
-            msg += `read the group description to avoid getting removeved🧏 `;
+            msginfo += `read the group description to avoid getting removeved🧏 `;
 
             zk.sendMessage(group.id, {
-              image: { url: ppgroup },
-              caption: msg,
+              caption: msg + msginfo,
               contextInfo: {
                footer: "*Njabulo Jb*, developed by Njabulo",
                 gifPlayback: true,
