@@ -74,4 +74,4 @@ fana({
   } else { 
     sendFormattedMessage(zk, chatId, 'You are not entitled to this order', ms);
   }
-});￼Enter
+});
