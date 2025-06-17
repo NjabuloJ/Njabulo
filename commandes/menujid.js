@@ -36,7 +36,7 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 *╭─❖*
-*┋ɴᴀᴍᴇ : ᴀʟᴇᴄ ᴊʙ*
+*┋ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
 *╰─❖*
 
 > sir Njabulo Jb\n${readmore}`;
@@ -56,7 +56,7 @@ let menuMsg = ``;
 \n`
     }
 
-    menuMsg += `> sir Rahman 
+    menuMsg += `> sir Njabulo Jb
 `;
 
    var lien = mybotpic();
@@ -67,7 +67,7 @@ let menuMsg = ``;
       text: infoMsg + menuMsg,
       contextInfo: {
         externalAdReply: {
-          title: "ᴀʟᴇᴄ ᴊʙ",
+          title: "ɴᴊᴀʙᴜʟᴏ ᴊʙ",
           body: "Follow my channel for more updates",
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
@@ -91,7 +91,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
       text: infoMsg + menuMsg,
       contextInfo: {
         externalAdReply: {
-          title: "ᴀʟᴇᴄ ᴊʙ",
+          title: "ɴᴊᴀʙᴜʟᴏ ᴊʙ",
           body: "Follow my channel for more updates",
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
@@ -113,7 +113,7 @@ else {
       text: infoMsg + menuMsg,
       contextInfo: {
         externalAdReply: {
-            title: "ᴀʟᴇᴄ ᴊʙ",
+            title: "ɴᴊᴀʙᴜʟᴏ ᴊʙ",
           body: "Follow my channel for more updates",
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
@@ -143,12 +143,12 @@ else {
            isForwarded: true,
                   forwardedNewsletterMessageInfo: {
               newsletterJid: '120363345407274799@newsletter',
-              newsletterName: '╭••➤ᴀʟᴇᴄ ᴊʙ',
+              newsletterName: '╭••➤ɴᴊᴀʙᴜʟᴏ ᴊʙ',
                   serverMessageId: 143,
                    },
                    forwardingScore: 999, // Score to indicate it has been forwarded
                externalAdReply: {
-               title: "ᴀʟᴇᴄ ᴊʙ",
+               title: "ɴᴊᴀʙᴜʟᴏ ᴊʙ",
                body: "Little blah slowed",
                mediaType: 1,
                thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
