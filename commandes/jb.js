@@ -43,41 +43,10 @@ _ _ ${cmd*`;
         }
         menuMsg += `
 _ _`;
-    }
+     
+      } 
+  zk.sendMessage(dest, { text: infoMsg + menuMsg, .map((i) => i.id) }, { quoted: ms })
 
-    menuMsg += `\n> sir Njabulo Jb `;
+   } else { repondre('command reserved for admins')}
 
-    var imageUrl = mybotpic();
-
-    try {
-        if (imageUrl.match(/\.(mp4|gif)$/i)) {
-            await zk.sendMessage(dest, { video: { url: url }, caption: infoMsg + menuMsg, gifPlayback: true }, { quoted: ms });
-        } else if (imageUrl.match(/\.(jpeg|png|jpg)$/i)) {
-            await zk.sendMessage(dest, { image: { url: url }, caption: infoMsg + menuMsg }, { quoted: ms });
-        } else {
-            repondre(infoMsg + menuMsg);
-        }
-
-        // Download and send audio
-        const audioUrl = "https://files.catbox.moe/xci982.mp3";
-        const audioPath = "./temp_audio.mp3";
-
-        const response = await axios({
-            url: audioUrl,
-            method: "GET",
-            responseType: "stream",
-        });
-
-        const writer = fs.createWriteStream(audioPath);
-        response.data.pipe(writer);
-
-        writer.on("finish", async () => {
-            await zk.sendMessage(dest, { audio: { url: audioPath }, mimetype: "audio/mp4", ptt: true }, { quoted: ms });
-            fs.unlinkSync(audioPath); // Delete the audio file after sending
-        });
-
-    } catch (e) {
-        console.log("🥵🥵 Menu error: " + e);
-        repondre("🥵🥵 Menu error: " + e);
-    }
 });
