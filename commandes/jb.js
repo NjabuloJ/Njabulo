@@ -26,6 +26,8 @@ fana({ nomCom: "ollmenu", categorie: "General" }, async (dest, zk, commandeOptio
 
     const time = moment().format('HH:mm:ss');
     const date = moment().format('DD/MM/YYYY');
+    const url= "https://files.catbox.moe/1l4ix7.jpg",
+
 
     let infoMsg = `
 commands`;
@@ -34,13 +36,13 @@ commands`;
 
     for (const category in commandsList) {
         menuMsg += `
-. - ${category} `;
+ *${category}* `;
         for (const cmd of commandsList[category]) {
             menuMsg += `          
-. - *${cmd}*`;
+_ _ ${cmd*`;
         }
         menuMsg += `
-. -`;
+_ _`;
     }
 
     menuMsg += `\n> sir Njabulo Jb `;
@@ -49,9 +51,9 @@ commands`;
 
     try {
         if (imageUrl.match(/\.(mp4|gif)$/i)) {
-            await zk.sendMessage(dest, { video: { url: imageUrl }, caption: infoMsg + menuMsg, gifPlayback: true }, { quoted: ms });
+            await zk.sendMessage(dest, { video: { url: url }, caption: infoMsg + menuMsg, gifPlayback: true }, { quoted: ms });
         } else if (imageUrl.match(/\.(jpeg|png|jpg)$/i)) {
-            await zk.sendMessage(dest, { image: { url: imageUrl }, caption: infoMsg + menuMsg }, { quoted: ms });
+            await zk.sendMessage(dest, { image: { url: url }, caption: infoMsg + menuMsg }, { quoted: ms });
         } else {
             repondre(infoMsg + menuMsg);
         }
