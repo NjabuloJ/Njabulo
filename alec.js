@@ -526,7 +526,7 @@ function mybotpic() {
             };
             var txt = "bot detected, \n";
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
-            const gifLink = "https://raw.githubusercontent.com/NjabuloJb/Alec-Jb/main/media/remover.gif";
+            const gifLink = "https://raw.githubusercontent.com/NjabuloJb/Njabulo/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
                 pack: 'Alec-Jb',
                 author: conf.OWNER_NAME,
@@ -678,10 +678,8 @@ zk.ev.on('group-participants.update', async (group) => {
                 msg += ` \n Hey 🖐️ @${membre.split("@")[0]} welcome to group nah🤗. \n\n`;
             }
 
-            msginfo += `read the group description to avoid getting removeved🧏 `;
-
             zk.sendMessage(group.id, {
-              caption: msg + msginfo,
+              caption: msg,
               contextInfo: {
                footer: "*Njabulo Jb*, developed by Njabulo",
                 gifPlayback: true,
