@@ -37,10 +37,6 @@ const date = moment().format('DD/MM/YYYY');
   let infoMsg =  `
 *╭─❖*
 *┋ɴᴀᴍᴇ : ᴀʟᴇᴄ ᴊʙ*
-*┋ᴅᴀᴛᴇ:* ${date}
-*┋ ᴛɪᴍᴇ:* ${temps}
-*┋ᴘʀᴇғɪx: [ ${prefixe} ]*
-*┋ᴘʟᴜɢɪɴs ᴄᴍᴅ:* ${cm.length}
 *╰─❖*
 
 > sir Njabulo Jb\n${readmore}`;
@@ -50,14 +46,13 @@ let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
 
     for (const cat in coms) {
         menuMsg += `
-*${cat}*
-*╭─❖*`;
+*${cat}*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-*┋* ${cmd}`;
+_ _ ${cmd}`;
         }
         menuMsg += `
-*╰─❖*
+ _ _
 \n`
     }
 
@@ -71,12 +66,6 @@ let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
         zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
       contextInfo: {
-          forwardingScore: 999,
-            isForwarded: true,
-            forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363353854480831@newsletter',
-              newsletterName: '╭••➤ᴀʟᴇᴄ ᴊʙ',
-              serverMessageId: 143},
         externalAdReply: {
           title: "ᴀʟᴇᴄ ᴊʙ",
           body: "Follow my channel for more updates",
@@ -101,12 +90,6 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
         zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
       contextInfo: {
-          forwardingScore: 999,
-            isForwarded: true,
-             forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363345407274799@newsletter',
-              newsletterName: '╭••➤ᴀʟᴇᴄ ᴊʙ',
-              serverMessageId: 143},
         externalAdReply: {
           title: "ᴀʟᴇᴄ ᴊʙ",
           body: "Follow my channel for more updates",
@@ -129,12 +112,6 @@ else {
     zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
       contextInfo: {
-          forwardingScore: 999,
-            isForwarded: true,
-             forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363345407274799@newsletter',
-              newsletterName: '╭••➤ᴀʟᴇᴄ ᴊʙ',
-              serverMessageId: 143},
         externalAdReply: {
             title: "ᴀʟᴇᴄ ᴊʙ",
           body: "Follow my channel for more updates",
