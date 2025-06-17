@@ -41,40 +41,23 @@ const date = moment().format('DD/MM/YYYY');
 
 > sir Njabulo Jb\n${readmore}`;
     
-    
-let menuMsg = ``;
-
-    for (const cat in coms) {
-        menuMsg += `
-*${cat}*`;
-        for (const cmd of coms[cat]) {
-            menuMsg += `
-- - ${cmd}`;
-        }
-        menuMsg += `
- - -
-\n`
-    }
-
-    menuMsg += `> sir Njabulo Jb
-`;
-
-   var lien = mybotpic();
+     var lien = mybotpic();
 
    if (lien.match(/\.(mp4|gif)$/i)) {
    try {
         zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
       contextInfo: {
+       footer: "*Njabulo Jb*, developed by Njabulo",
+        gifPlayback: true,
         externalAdReply: {
-          title: "ɴᴊᴀʙᴜʟᴏ ᴊʙ",
-          body: "Follow my channel for more updates",
-          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          title: "Njabulo Jb",
+          body: "Message type [ollmenu]",
           mediaType: 1,
-            renderLargerThumbnail: true,
-
-          showAdAttribution: false
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         renderLargerThumbnail: true,
+         showAdAttribution: true,
         }
       }
     }, { quoted: ms });
@@ -89,16 +72,17 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
         zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
-      contextInfo: {
+     contextInfo: {
+       footer: "*Njabulo Jb*, developed by Njabulo",
+        gifPlayback: true,
         externalAdReply: {
-          title: "ɴᴊᴀʙᴜʟᴏ ᴊʙ",
-          body: "Follow my channel for more updates",
-          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          title: "Njabulo Jb",
+          body: "Message type [ollmenu]",
           mediaType: 1,
-            renderLargerThumbnail: true,
-
-          showAdAttribution: false
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         renderLargerThumbnail: true,
+         showAdAttribution: true,
         }
       }
     }, { quoted: ms });
@@ -111,16 +95,17 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
 else {
     zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
-      contextInfo: {
+           contextInfo: {
+       footer: "*Njabulo Jb*, developed by Njabulo",
+        gifPlayback: true,
         externalAdReply: {
-            title: "ɴᴊᴀʙᴜʟᴏ ᴊʙ",
-          body: "Follow my channel for more updates",
-          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          title: "Njabulo Jb",
+          body: "Message type [ollmenu]",
           mediaType: 1,
-            renderLargerThumbnail: true
-
-
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         renderLargerThumbnail: true,
+         showAdAttribution: true,
         }
       }
     }, { quoted: ms });
