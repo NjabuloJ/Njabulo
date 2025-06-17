@@ -9,7 +9,7 @@ const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
 
-fana({ nomCom: "ju", categorie: "General" }, async (dest, zk, commandeOptions) => {
+fana({ nomCom: "ollmenu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../njabulo//fana");
     var coms = {};
@@ -42,17 +42,17 @@ const date = moment().format('DD/MM/YYYY');
 > sir Njabulo Jb\n${readmore}`;
     
     
-let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
+let menuMsg = ``;
 
     for (const cat in coms) {
         menuMsg += `
 *${cat}*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-_ _ ${cmd}`;
+- - ${cmd}`;
         }
         menuMsg += `
- _ _
+ - -
 \n`
     }
 
@@ -69,8 +69,8 @@ _ _ ${cmd}`;
         externalAdReply: {
           title: "ᴀʟᴇᴄ ᴊʙ",
           body: "Follow my channel for more updates",
-          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-          sourceUrl: conf.GURL,
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
             renderLargerThumbnail: true,
 
@@ -93,8 +93,8 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
         externalAdReply: {
           title: "ᴀʟᴇᴄ ᴊʙ",
           body: "Follow my channel for more updates",
-          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-          sourceUrl: conf.GURL,
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
             renderLargerThumbnail: true,
 
@@ -115,8 +115,8 @@ else {
         externalAdReply: {
             title: "ᴀʟᴇᴄ ᴊʙ",
           body: "Follow my channel for more updates",
-          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-          sourceUrl: conf.GURL,
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
           mediaType: 1,
             renderLargerThumbnail: true
 
