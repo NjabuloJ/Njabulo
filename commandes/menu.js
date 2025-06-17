@@ -46,7 +46,7 @@ const date = moment().format('DD/MM/YYYY');
    if (lien.match(/\.(mp4|gif)$/i)) {
    try {
         zk.sendMessage(dest, {
-      text: infoMsg + menuMsg,
+      text: infoMsg,
       contextInfo: {
        footer: "*Njabulo Jb*, developed by Njabulo",
         gifPlayback: true,
@@ -71,7 +71,7 @@ const date = moment().format('DD/MM/YYYY');
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
         zk.sendMessage(dest, {
-      text: infoMsg + menuMsg,
+      text: infoMsg,
      contextInfo: {
        footer: "*Njabulo Jb*, developed by Njabulo",
         gifPlayback: true,
@@ -94,7 +94,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
 } 
 else {
     zk.sendMessage(dest, {
-      text: infoMsg + menuMsg,
+      text: infoMsg,
            contextInfo: {
        footer: "*Njabulo Jb*, developed by Njabulo",
         gifPlayback: true,
