@@ -9,7 +9,7 @@ const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
 
-fana({ nomCom: "olmenu", categorie: "General" }, async (dest, zk, commandeOptions) => {
+fana({ nomCom: "omenu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../njabulo//fana");
     var coms = {};
