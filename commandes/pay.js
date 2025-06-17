@@ -9,14 +9,17 @@ const { downloadAndSaveMediaMessage } = require('@whiskeysockets/baileys');
 async function sendFormattedMessage(zk, chatId, text, ms) {
   await zk.sendMessage(chatId, {
     text,
-    contextInfo: {
-      externalAdReply: {
-        title: "Njabulo Jb",
-        body: "Message via ad !",
-        thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-        sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-        mediaType: 1,
-        showAdAttribution: true
+       contextInfo: {
+       footer: "*Njabulo Jb*, developed by Njabulo",
+        gifPlayback: true,
+        externalAdReply: {
+          title: "Njabulo Jb",
+          body: "Message YouTube search",
+          mediaType: 1,
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+         renderLargerThumbnail: true,
+         showAdAttribution: true,
       }
     }
   }, { quoted: ms });
