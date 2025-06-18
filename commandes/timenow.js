@@ -58,4 +58,4 @@ fana({
     console.error("Error in .timezone command:", e);
     sendFormattedMessage(zk, chatId, "❌ An error occurred. Please try again later.", ms);
   }
-});￼Enter
+});
