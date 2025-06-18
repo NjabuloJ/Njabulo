@@ -32,7 +32,7 @@ fana({ nomCom: "pong", categorie: "General" }, async (dest, zk, commandeOptions)
           isForwarded: true,
          forwardedNewsletterMessageInfo: {
          newsletterJid: '120363399999197102@newsletter',
-         newsletterName: "",
+         newsletterName: "pong",
          serverMessageId: 143,
                 }
             }
