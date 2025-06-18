@@ -27,7 +27,7 @@ fana({ nomCom: "pong", categorie: "General" }, async (dest, zk, commandeOptions)
 
     try {
         await zk.sendMessage(dest, { 
-            text: `*🚀 SYSTEM PING* 🔋\n\n🕒 System Time: ${time}\n*▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*\nDuration pong: ${ping}ms\n📅 Activated: ${date}\n\n⚡ Performance:\nReliability: 99.${ping}%\n Stability: ${ping}%\n Nodes:\nGlobal Distribution\n\n🔋 Maintenance:\nAuto-Scheduled\n*▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*\n`,
+            text: `*🚀 SYSTEM PING* 🔋\n\n🕒 System Time: ${time}\n*▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*\n⚡ Response: ${ping}ms🟢\n📶 Quality: HIGH LATENCY\n⚡Njabulo Jb run online:\n- -run: 99.${ping}%\n cmd: ${ping}1%\n\n🌐 Routing: Automatic Optimization\n🖥️ Server: Core-: ${date}890*▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*\n> *ping is available working online 24/7*`,
             contextInfo: {
           isForwarded: true,
          forwardedNewsletterMessageInfo: {
