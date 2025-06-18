@@ -34,8 +34,6 @@ fana({ nomCom: "pong", categorie: "General" }, async (dest, zk, commandeOptions)
          newsletterJid: '120363399999197102@newsletter',
          newsletterName: "njabulo Jb ping system ms",
          serverMessageId: 143,
-         },
-         forwardingScore: 999, // Score to indicate it has been forwarded
                 }
             }
         }, { quoted: ms });
