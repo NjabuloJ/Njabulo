@@ -58,7 +58,7 @@ fana({
         gifPlayback: true,
         externalAdReply: {
           title: "Njabulo Jb",
-          body: "Message YouTube search",
+          body: "Message gitclone",
           mediaType: 1,
           thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
