@@ -5,7 +5,7 @@ const { fana } = require(__dirname + "/../njabulo/fana");
 const { format } = require(__dirname + "/../njabulo/mesfonctions");
 const os = require("os");
 const moment = require("moment-timezone");
-const s = require(__dirname + "/../config");
+const s = require(__dirname + "/../set");
 
 
 const more = String.fromCharCode(8206);
