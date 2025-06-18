@@ -27,12 +27,15 @@ fana({ nomCom: "pong", categorie: "General" }, async (dest, zk, commandeOptions)
 
     try {
         await zk.sendMessage(dest, { 
-            text: `> *🚀 SYSTEM PING* 🔋\n\n🕒 System Time: ${time}\n*▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*\n🟢Response: ${ping}ms\n📶 Quality: HIGH LATENCY\n- -run online\n- -run: 99.${ping}%\n- -cmd: ${ping}1%\n\n🌐 Routing: Automatic Optimization\n🖥️ Server: Core-: ${date} :${ping}\n*▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*\n> *ping is available working online 24/7*`,
-            contextInfo: {
-          isForwarded: true,
-         forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363399999197102@newsletter',
-         serverMessageId: 143,
+        text: `> *🚀 SYSTEM PING* 🔋\n\n🕒 System Time: ${time}\n*▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*\n🟢Response: ${ping}ms\n📶 Quality: HIGH LATENCY\n- -run online\n- -run: 99.${ping}%\n- -cmd: ${ping}1%\n\n🌐 Routing: Automatic Optimization\n🖥️ Server: Core-: ${date} :${ping}\n*▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰*\n> *ping is available working online 24/7*`,
+        contextInfo: {
+        externalAdReply: {
+          title: "Njabulo Jb",
+          body: "Message pong system!",
+          thumbnailUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+          mediaType: 1,
+          showAdAttribution: true
                 }
             }
         }, { quoted: ms });
