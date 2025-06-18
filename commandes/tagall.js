@@ -40,10 +40,7 @@ fana({ nomCom: "tagall", categorie: 'Group', reaction: "🚨" }, async (chatId, 
 
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   var tag = ""; 
-  tag +=`
- *Group* : *${nomGroupe}* 
- *Message* : *${mess}*\n
-` ;
+  tag +=(zk, chatId,`\n*Group* : *${nomGroupe}*\n *Message* : *${mess}*\n` ;ms);
   let emoji = ['> dear💗']
   let random = Math.floor(Math.random() * (emoji.length - 1))
 
