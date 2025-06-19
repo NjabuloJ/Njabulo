@@ -21,7 +21,7 @@ fana({
     repondre(`🎰 *¡Resultados de la Tragamonedas!* 🎉\n\n[ ${result} ]`);
 
     if (reels[0] === reels[1] && reels[1] === reels[2]) {
-      if (reels[0] === '🍒') {
+      if (reels[0] === '🍒'🍋'🍇'⭐') {
         repondre(`🥳 *¡FELICIDADES!* ¡Has ganado €150 Euros!`);
       } else {
         repondre(`🥳 *¡FELICIDADES!* ¡Has ganado €50 Euros!`);
