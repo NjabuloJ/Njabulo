@@ -2,7 +2,7 @@ const { fana } = require("../njabulo/fana");
 const conf = require(__dirname + "/../set");
 
 fana({
-  nomCom: "slot",
+  nomCom: "slt",
   aliases: ["spin"],
   desc: "to play slot machine",
   categorie: "Game"
